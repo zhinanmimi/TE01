@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7850872189:AAF9HCD737fMd8ILneuP2NEFxBG5iVDCwHo
+      - key: DB_USER
+        value: render
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_HOST
+        sync: false
+      - key: DB_NAME
+        value: botdb
+      - key: ADMIN_ID
+        value: "7030183171"
+    autoDeploy: true 
